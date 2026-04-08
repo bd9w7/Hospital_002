@@ -8,8 +8,9 @@ Task2_SelfStudy：
 
 ## Content Introduction
 This module is interoperable with the hospital calling system in Task1 and implements emergency priority:
-- Min-Heap: A priority queue data structure not covered in the course, used for priority sorting of emergency patients in the hospital calling system
-- Cocktail Sort: A bidirectional bubble sort algorithm not covered in the course, used for multi-directional sorting of patient priorities in the hospital calling system
+- min_heap.py: Complete MinHeap implementation (ADT)
+- cocktail_sort.py: Cocktail sort implementation with optional key function
+- test.py: Unit tests for both
 
 ## Self-Study Content
 ### MinHeap

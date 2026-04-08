@@ -14,10 +14,12 @@ The hospital intelligent appointment and queueing system is developed based on o
 ## content introduction
 ### Directory structure
 - Task1_OOP：
-    main.py               # GUI main program
-    data_structures.py    # Classical data structure encapsulation
-    patient_manager.py    # Sorting algorithm, data management
-    appointment_system.py # Register, call...
+    - main.py：GUI entry, based on tkinter
+    - person.py：Abstract base class (abstraction & encapsulation)
+    - patient.py：Patient class inheriting from Person
+    - appointment.py：Core business logic (stack, queue, BST, heap, cocktail sort)
+    - data_structures.py：LinkedList, Stack, Queue, BST implementations
+    - patient_sorter.py：Sorting algorithms with polymorphism
 
 #### TASK1 Core Function
 1. Patient registration and information management

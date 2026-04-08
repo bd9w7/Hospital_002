@@ -1,3 +1,4 @@
+# LinkedList (for visit history)
 class Node:
     def __init__(self, data):
         self.data = data
@@ -18,12 +19,14 @@ class LinkedList:
         last.next = new_node
 
     def traverse(self):
+        result = []
         current = self.head
         while current:
-            print(current.data, end=" -> ")
+            result.append(str(current.data))
             current = current.next
-        print("None")
+        return result
 
+# Stack (for undo operations)
 class Stack:
     def __init__(self):
         self.items = []
@@ -32,41 +35,42 @@ class Stack:
         self.items.append(item)
 
     def pop(self):
-        if not self.is_empty():
-            return self.items.pop()
-        return None
+        return self.items.pop() if self.items else None
 
     def is_empty(self):
         return len(self.items) == 0
 
     def peek(self):
-        if not self.is_empty():
-            return self.items[-1]
-        return None
+        return self.items[-1] if self.items else None
+
+# Queue (for normal patients)
+from collections import deque
 
 class Queue:
     def __init__(self):
-        self.items = []
+        self.items = deque()
 
     def enqueue(self, item):
         self.items.append(item)
 
     def dequeue(self):
-        if not self.is_empty():
-            return self.items.pop(0)
-        return None
+        return self.items.popleft() if self.items else None
 
     def is_empty(self):
         return len(self.items) == 0
 
+    def size(self):
+        return len(self.items)
+
+# Binary Search Tree (for PID-based quick search)
 class BSTNode:
     def __init__(self, key, data):
-        self.key = key  # Patient ID as search key
-        self.data = data 
+        self.key = key
+        self.data = data
         self.left = None
         self.right = None
 
-class BinarySearchTree: 
+class BinarySearchTree:
     def __init__(self):
         self.root = None
 
@@ -91,3 +95,31 @@ class BinarySearchTree:
         if key < node.key:
             return self._search_rec(node.left, key)
         return self._search_rec(node.right, key)
+
+    def delete(self, key):
+        self.root = self._delete_rec(self.root, key)
+
+    def _delete_rec(self, node, key):
+        if node is None:
+            return None
+        if key < node.key:
+            node.left = self._delete_rec(node.left, key)
+        elif key > node.key:
+            node.right = self._delete_rec(node.right, key)
+        else:
+            # Node to be deleted found
+            if node.left is None:
+                return node.right
+            elif node.right is None:
+                return node.left
+            # Node with two children: find the smallest node in the right subtree
+            min_node = self._find_min(node.right)
+            node.key = min_node.key
+            node.data = min_node.data
+            node.right = self._delete_rec(node.right, min_node.key)
+        return node
+
+    def _find_min(self, node):
+        while node.left:
+            node = node.left
+        return node

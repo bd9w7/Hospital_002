@@ -1,63 +1,47 @@
+# MinHeap Implementation
+# Data Structure: Complete Binary Tree
 class MinHeap:
     def __init__(self):
-        self.heap = []
+        self.heap = [] # Heap list
 
-    def is_empty(self):
-        return len(self.heap) == 0
+    # Insert element
+    def push(self, val):
+        self.heap.append(val)
+        self._up(len(self.heap) - 1)
 
-    def peek(self):
-        if self.is_empty():
-            return None
-        return self.heap[0]
-
-    def insert(self, item):
-        self.heap.append(item)
-        self._bubble_up(len(self.heap) - 1)
-
-    def _bubble_up(self, idx):
-
-        while idx > 0:
-            parent_idx = (idx - 1) // 2
-
-            if self.heap[idx] < self.heap[parent_idx]:
-                self.heap[idx], self.heap[parent_idx] = self.heap[parent_idx], self.heap[idx]
-                idx = parent_idx
+    # Heapify up
+    def _up(self, i):
+        while i > 0:
+            parent = (i - 1) // 2
+            if self.heap[i] < self.heap[parent]:
+                self.heap[i], self.heap[parent] = self.heap[parent], self.heap[i]
+                i = parent
             else:
                 break
 
+    # Pop minimum
     def pop(self):
-        if self.is_empty():
-            return None
-        if len(self.heap) == 1:
-            return self.heap.pop()
+        if not self.heap:
+            return None # Handle empty heap
+        min_val = self.heap[0]
+        last = self.heap.pop()
+        if self.heap:
+            self.heap[0] = last
+            self._down(0)
+        return min_val
 
-        top = self.heap[0]
-        self.heap[0] = self.heap.pop()
-        self._bubble_down(0)
-        return top
-
-    def _bubble_down(self, idx):
-        n = len(self.heap)
+    # Heapify down
+    def _down(self, i):
+        size = len(self.heap)
         while True:
-            left_idx = 2 * idx + 1
-            right_idx = 2 * idx + 2
-            min_idx = idx
-
-
-            if left_idx < n and self.heap[left_idx] < self.heap[min_idx]:
-                min_idx = left_idx
-
-            if right_idx < n and self.heap[right_idx] < self.heap[min_idx]:
-                min_idx = right_idx
-
-            if min_idx != idx:
-                self.heap[idx], self.heap[min_idx] = self.heap[min_idx], self.heap[idx]
-                idx = min_idx
-            else:
+            left = 2 * i + 1
+            right = 2 * i + 2
+            smallest = i
+            if left < size and self.heap[left] < self.heap[smallest]:
+                smallest = left
+            if right < size and self.heap[right] < self.heap[smallest]:
+                smallest = right
+            if smallest == i:
                 break
-
-    def traverse(self):
-        if self.is_empty():
-            print("Heap is empty")
-            return
-        print("Min-heap elements: ", self.heap)
+            self.heap[i], self.heap[smallest] = self.heap[smallest], self.heap[i]
+            i = smallest

@@ -1,22 +1,41 @@
-# Task2：Self-Study of Data Structures and Algorithms  (Min-Heap and Cocktail Sort)
-## Directory structure
-Task2_SelfStudy：
-    min_heap.py: Complete implementation of Min-Heap, including core ADT methods
-    cocktail_sort.py: Complete implementation of Cocktail Sort, supporting multi-dimensional sorting
-    test_cases.py: test cases
-    User_Guide.md: Running and usage guide
+# Self-study module: minimum pile and cocktail sorting
 
-## Content Introduction
-This module is interoperable with the hospital calling system in Task1 and implements emergency priority:
-- min_heap.py: Complete MinHeap implementation (ADT)
-- cocktail_sort.py: Cocktail sort implementation with optional key function
-- test.py: Unit tests for both
+## Module content
 
-## Self-Study Content
-### MinHeap
-1. ADT: Binary tree structure supporting core operations such as insertion, popping the heap top, and heapification
-2. Core Application: Priority queue for emergency patients in hospitals (priority 1 for first consultation)
+This module is an independent learning task of the course, which realizes the minimum heap and cocktail sorting, and provides test case verification function correctness.
 
-### Cocktail Sort
-1. Algorithm Type: Bidirectional bubble sort, traversing and swapping bidirectionally from left to right, right to left
-2. Core Application: Bidirectional sorting of hospital patients by priority/age/ID, optimizing sorting efficiency for partially ordered data
+## Demonstration video
+
+[Algorithm Demonstration and Test Video] [https://drive.google.com/file/d/1Bh-3si6VVi4xdiSj2Ij7DyyDgBCccoIx/view?usp=sharing]
+
+## Document description
+
+- `min_heap.py`: the minimum heap is fully implemented, including insertion, ejection, stacking and other core operations
+
+- `cocktail_sort.py`: cocktail sorting implementation, support custom sorting keys
+
+- `test_cases.py`: unit test, verify the correctness of heap and sorting algorithms
+
+- `User_Guide.md`: Instructions for use and operation
+
+## Learning content
+
+### Minimum Heap (MinHeap)
+
+- Structure: complete binary tree
+
+- Core operation: insert, extract the top of the heap, up/down heap
+
+- Application Scenario: Hospital Emergency Patient Priority Cohort
+
+### Cocktail Sort (Cocktail Sort)
+
+- Principle: two-way bubbling sorting, left and right alternate traversal and exchange
+
+- Features: More efficient for approximate ordered arrays
+
+- Application scenario: the list of patients is sorted by priority, age and other dimensions
+
+## Operation mode
+
+Run the test file directly:

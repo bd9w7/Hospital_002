@@ -34,7 +34,3 @@ This module is an independent learning task of the course, which realizes the mi
 - Features: More efficient for approximate ordered arrays
 
 - Application scenario: the list of patients is sorted by priority, age and other dimensions
-
-## Operation mode
-
-Run the test file directly:

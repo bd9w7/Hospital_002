@@ -4,12 +4,6 @@
 
 Based on the Python object-oriented programming idea, this system realizes complete business processes such as hospital outpatient registration, queuing, calling, query and sorting, and focuses on solving practical problems such as emergency priority, efficient queuing and operation revocable.
 
-## Basic information
-
-- Course: COMP2090SEF
-
-- Group members: Li Xuanyi, Fan Lingwen, He Zhixun
-
 ## Demonstration video
 [Task1_video](https://drive.google.com/file/d/11K0MZeCeFaN7uQMaPD9Lo9eEucABBK6J/view?usp=sharing) 
 

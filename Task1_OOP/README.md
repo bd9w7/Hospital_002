@@ -11,8 +11,7 @@ Based on the Python object-oriented programming idea, this system realizes compl
 - Group members: Li Xuanyi, Fan Lingwen, He Zhixun
 
 ## Demonstration video
-
-[(https://drive.google.com/file/d/1U4vtuItlU27Z4EdvAhI5DxUbWB6O-7nM/view?usp=sharing)]
+[Task1_video](https://drive.google.com/file/d/11K0MZeCeFaN7uQMaPD9Lo9eEucABBK6J/view?usp=sharing) 
 
 ## File structure
 

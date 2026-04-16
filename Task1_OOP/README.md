@@ -12,7 +12,7 @@ Based on the Python object-oriented programming idea, this system realizes compl
 
 ## Demonstration video
 
-[Function Demonstration Video][(https://drive.google.com/file/d/1U4vtuItlU27Z4EdvAhI5DxUbWB6O-7nM/view?usp=sharing)]
+[(https://drive.google.com/file/d/1U4vtuItlU27Z4EdvAhI5DxUbWB6O-7nM/view?usp=sharing)]
 
 ## File structure
 

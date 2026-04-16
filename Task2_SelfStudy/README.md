@@ -6,7 +6,7 @@ This module is an independent learning task of the course, which realizes the mi
 
 ## Demonstration video
 
-[Algorithm Demonstration and Test Video] [https://drive.google.com/file/d/1Bh-3si6VVi4xdiSj2Ij7DyyDgBCccoIx/view?usp=sharing]
+[https://drive.google.com/file/d/1Bh-3si6VVi4xdiSj2Ij7DyyDgBCccoIx/view?usp=sharing]
 
 ## Document description
 
